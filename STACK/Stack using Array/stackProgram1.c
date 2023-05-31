@@ -82,7 +82,7 @@ int main()
 
         case 7:
             printf("\n Elements in Stack are : ");
-            for (count = 0; count < MAX; count++)
+            for (count = 0; count <= tos; count++)
             {
                 printf("%d ", stack_arr[count]);
             }
