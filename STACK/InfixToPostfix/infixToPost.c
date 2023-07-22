@@ -70,7 +70,7 @@ void push(char ch)
 }
 
 int presidence(char x){
-	if(x=='^')
+	if(x=='^' || x=='$')
 	{
 		return 3;
 	}else if(x=='*'||x=='/')
@@ -107,7 +107,7 @@ void pfix(char*expr)
 //				printf("\n-pe[%d]--%c---\n",j,postexp[j]);
 				j++;
 			}
-		}else if(ch=='*'||ch=='/'||ch=='^'||ch=='+'||ch=='-')
+		}else if(ch=='*'||ch=='/'||ch=='^'||ch=='+'||ch=='-' ||ch=='$')
 		{
 			while(isEmpty()==false && presidence(stack[tos])>=presidence(ch))
 			{
